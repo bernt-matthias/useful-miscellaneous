@@ -60,7 +60,7 @@ def main():
         parser.print_help()
         exit(1)
 
-    conf = yaml.load(open(args.config,'r'))
+    conf = yaml.load(open(args.config,'r'), Loader=yaml.FullLoader)
 
     key = conf['key_file']
     user = conf['username']

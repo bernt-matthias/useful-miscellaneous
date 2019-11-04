@@ -196,7 +196,7 @@ def main():
         parser.print_help()
         exit(1)
 
-    conf = yaml.load(open(args.config,'r'))
+    conf = yaml.load(open(args.config,'r'), Loader=yaml.FullLoader)
 
     #Connection stuff
     pg_host = conf['pg_host']
