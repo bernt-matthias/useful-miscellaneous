@@ -317,7 +317,7 @@ def main():
         conn.close()
 
         for u in user_warns.keys():
-            send_email_to_user(user_warns[u], user_warn_hists[u], warn_threshold, delete_threshold, server_name, smtp_server, from_addr, response_addr, info_url, VERBOSE)
+            send_email_to_user(user_warns[u], user_warn_hists[u], warn_threshold, delete_threshold, server_name, smtp_server, from_addr, response_addr, bcc_addr, info_url, VERBOSE)
     return
 
 
